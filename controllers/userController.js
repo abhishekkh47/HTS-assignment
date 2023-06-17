@@ -6,7 +6,7 @@ const loginUser = async (req, res) => {
         // login user using static function created using schema
         const user = await User.login(email, password);
 
-        res.status(200).json({ email, password });
+        res.status(200).json({ message: "success" });
     } catch (error) {
         res.status(400).json({ error: error.message });
     }
