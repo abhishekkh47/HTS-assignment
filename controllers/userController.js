@@ -18,7 +18,7 @@ const signupUser = async (req, res) => {
         // signup user using static function created using schema
         const user = await User.signup(first_name, last_name, email, password);
 
-        res.status(200).json({ first_name, last_name, email, password });
+        res.status(200).json({ message: 'signup successful' });
     } catch (error) {
         res.status(400).json({ error: error.message });
     }
